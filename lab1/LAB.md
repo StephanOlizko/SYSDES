@@ -120,7 +120,11 @@
 
 Черный путь - чтение (отвечает CDN). Красный - бронь (только впущенные). Правду о местах знает только основной Postgres.
 
-Исходники: [01-entities.excalidraw](diagrams/01-entities.excalidraw), [02-architecture.excalidraw](diagrams/02-architecture.excalidraw).
+![Очередь](diagrams/03-queue-sequence.png)
+
+Путь человека через очередь: лотерея до 11:59 (п. 17), позиция в подписанном токене, ожидание по снимку из CDN (п. 18), впуск и бронь (п. 19, 20). Выходов четыре: холд, истекшее окно, пауза при 0 мест (Р4), честный отказ дальним номерам (Р5).
+
+Исходники: [01-entities.excalidraw](diagrams/01-entities.excalidraw), [02-architecture.excalidraw](diagrams/02-architecture.excalidraw), [03-queue-sequence.excalidraw](diagrams/03-queue-sequence.excalidraw).
 
 ## 5. Отказы
 
